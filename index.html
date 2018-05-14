@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assigment 1</title>
+    <link rel="stylesheet" type="text/css" / href="assets/css/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <section class="container">
+            <div>
+                <h3>Sort by category:</h3>
+                <button class="button" id="sort-wife">Wife</button>
+                <button class="button" id="sort-girlfriend">Girlfriend</button>
+                <button class="button" id="sort-reset">All</button>
+            </div>
+        </section>
+        <section class="container">
+            <div>
+                <button class="button" id="display-date">Date on</button>
+            </div>
+        </section>
+        <section class="container">
+            <ul id="thumbnail-list" class="thumbnail__list">
+            </ul>
+        </section>
+        <div class="modal" id="modal">
+            <div class="modal__inner">
+                <button id="modal-close" class="modal__close">X</button>
+                <img class="modal__image" />
+                <div id="map"></div>
+            </div>
+        </div>
+        <template id="thumbnail">
+            <li class="thumbnail">
+                <img class="thumbnail__image" />
+                <p class="thumbnail__date hidden"></p>
+                <p class="thumbnail__title"></p>
+                <p class="thumbnail__description"></p>
+                <button class="button thumbnail__button">View</button>
+            </li>
+        </template>
+    </div>
+    <script>
+        var initMap = () => {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644,
+                },
+                zoom: 8,
+            });
+        };
+    </script>
+    <script src="index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuNv7w4l_Nrraubfn4r0-CV0VjkdWaxcc&callback=initMap">
+    </script>
+</body>
+
+</html>
