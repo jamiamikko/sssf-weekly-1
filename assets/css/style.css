@@ -22,7 +22,8 @@ body {
   border: 0; }
   .button:hover {
     background-color: white;
-    color: #088DA5; }
+    color: #088DA5;
+    border-bottom: 1px solid #088DA5; }
 
 .thumbnail {
   width: 33%;

@@ -34,6 +34,7 @@ body {
     &:hover {
         background-color:$white;
         color: $green;
+        border-bottom: 1px solid $green;
     }
 }
 
